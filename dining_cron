@@ -1,0 +1,12 @@
+# Maseeh vs Baker Dinner crontab as of Mon Sep 9 11:27:34 EDT 2013
+# To load this crontab, run "cronload dining_cron" in your cron_scripts directory
+# (On athena, you must run "add scripts" before cronload)
+
+# This line sets a reasonable default path
+PATH=/mit/cyrbritt/cron_scripts:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin
+
+HOME=/mit/cyrbritt/cron_scripts
+MAILTO=""
+
+# Send a mail at 4:00
+0 16 * * 1-5 python menu_reader.py
